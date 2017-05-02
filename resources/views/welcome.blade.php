@@ -149,7 +149,7 @@
                                         ({{$value->id}})
                                     </div>
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-o btn-success">View Profile</a>
+                                        <a href="{{route ('view', ['id' =>$value->id])}}"   class="btn btn-o btn-success"  >View Profile</a>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -344,7 +344,30 @@
         </div>
     </div>
 </div>
+{{--<script type="text/javascript">--}}
+    {{--var token = '{{Session::token()}}';--}}
+    {{--var url = '{{ route('view')}}';--}}
+{{--</script>--}}
+{{--<script type="text/javascript">--}}
+    {{--function view(userid) {--}}
+        {{--var url             = "/viewprofile";--}}
+        {{--var $status         = {};--}}
+        {{--$status.id          = userid;--}}
 
+
+        {{--$.ajax({--}}
+            {{--type: "GET",--}}
+            {{--headers:{"X-CSRF-TOKEN":token},--}}
+            {{--url: url,--}}
+            {{--data: $status,--}}
+            {{--cache: false,--}}
+            {{--success: function(data){--}}
+                {{--window.location.pathname = '/viewprofile';--}}
+            {{--}--}}
+        {{--});--}}
+        {{--return false;--}}
+    {{--};--}}
+{{--</script>--}}
 <script src="/assets/js/jquery-2.1.1.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <script src="/assets/js/jquery-ui-touch-punch.js"></script>
@@ -355,5 +378,28 @@
 <script src="/assets/js/infobox.js"></script>
 <script src="/assets/js/jquery.visible.js"></script>
 <script src="/assets/js/home.js" type="text/javascript"></script>
+
+
+<!-- Modal-Effect -->
+<!-- jQuery  -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.slimscroll.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/waves.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+
+
+<script src="assets/js/jquery.core.js"></script>
+<script src="assets/js/jquery.app.js"></script>
+
+<!-- Modal-Effect -->
+<script src="assets/plugins/custombox/js/custombox.min.js"></script>
+<script src="assets/plugins/custombox/js/legacy.min.js"></script>
 </body>
+
 </html>

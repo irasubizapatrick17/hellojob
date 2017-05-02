@@ -43,4 +43,16 @@ class landingpageController extends Controller
             ->with('job_seeker',$job_seeker);
     }
 
+
+    public function  view(Request $request ,$id)
+    {
+
+        $job_seeker =Job_seeker::select('job_seeker.*','first_name')
+                ->where('job_seeker.id','=',$id)
+                ->get();
+        return view ('viewprofile')
+            ->with('job_seeker',$job_seeker);
+
+    }
+
 }

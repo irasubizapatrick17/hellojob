@@ -19,6 +19,8 @@ Route::get('/', ['uses' => 'landingpageController@index']);
         'uses' =>'landingpageController@search_job_seeker',
         'as'   =>'users.explore'
     ]);
+Route::get('/view/{id}','landingpageController@view')->name('view');
+
 
 Auth::routes();
 

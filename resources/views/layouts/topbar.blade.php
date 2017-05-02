@@ -3,7 +3,7 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <div class="text-center">
-            <a href="index.html" class="logo"><i class="icon-magnet icon-c-logo"></i><span>HELL<i class="md md-album"></i>JOB</span></a>
+            <a href="/" class="logo"><i class="icon-magnet icon-c-logo"></i>HELLO JOB</a>
         </div>
     </div>
 
