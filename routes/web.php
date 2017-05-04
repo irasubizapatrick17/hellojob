@@ -56,15 +56,41 @@ Route::group(['middleware'=> 'auth'], function()
 
 
     Route::resource('/allusers','AllusersController');
+
     Route::post('deactivate','AllusersController@deactivate')->name('deactivate');
+
     Route::post('activate','AllusersController@activate')->name('activate');
+
     Route::resource('/my_cv','JobseekerController');
+
     Route::resource('Addprofile','AddProfileController');
+
     Route::resource('/company_profile','CompanyProfileController');
+
     Route::resource('company_jobseeker','Company_jobseekerController');
+
     Route::resource('/all_jobseeker','AlljobseekerController');
+
     Route::resource('/all_employers','AllemployerController');
 
+    Route::get('/job_seeker_company','JobseekerController@job_seeker_company')->name('job_seeker_company');
 
+    Route::get('/job_seeker_individual','JobseekerController@job_seeker_individual')->name('job_seeker_individual');
+
+    Route::get('/employer_individual','JobseekerController@employer_individual')->name('employer_individual');
+
+    Route::get('/employer_company','JobseekerController@employer_company')->name('employer_company');
+    Route::resource('/records_for_hire','RecordController');
+
+    Route::get('/records_for_hire','RecordController@hire');
+
+    Route::post('pending','RecordController@pending')->name('pending');
+
+    Route::post('activate','RecordController@activate')->name('activate');
+
+    Route::get('import',function(){
+        return view('users.import.all_job_seeker_individual');
+    });
+    Route::post('import', 'AlljobseekerController@import');
 
 });

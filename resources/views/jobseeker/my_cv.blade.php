@@ -228,8 +228,12 @@
                                             <label>Location</label>
                                             <input type="text" name="personal_location" value="" class="form-control" placeholder="Enter Organization Location">
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <label>Duration</label>
+                                            <input type="text" name="duration" class="form-control" value="" placeholder="Enter Years">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label></label>
                                             <input type="text" name="duration" class="form-control" value="" placeholder="Enter Years">
                                         </div>
                                     </section>

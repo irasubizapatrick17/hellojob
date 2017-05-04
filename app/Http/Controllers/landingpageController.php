@@ -38,7 +38,7 @@ class landingpageController extends Controller
 
     public function  search_job_seeker(Request $request)
     {
-        $job_seeker        =Job_seeker::all();
+        $job_seeker  =Job_seeker::all();
         return view('users.explore')
             ->with('job_seeker',$job_seeker);
     }
@@ -47,7 +47,7 @@ class landingpageController extends Controller
     public function  view(Request $request ,$id)
     {
 
-        $job_seeker =Job_seeker::select('job_seeker.*','first_name')
+        $job_seeker =Job_seeker::select('job_seeker.*','first_name','profile')
                 ->where('job_seeker.id','=',$id)
                 ->get();
         return view ('viewprofile')

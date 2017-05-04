@@ -4,7 +4,7 @@
         <div id="sidebar-menu">
             <ul>
 
-                <li class="text-muted menu-title">Navigation</li>
+                <li class="text-muted menu-title">Welcome {{ Auth::user()->name }}</li>
                 <li> <a href="/admin_dashboard"><i class="fa fa-home"></i>Dashboard</a></li>
 
                 <li class="has_sub">

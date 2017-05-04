@@ -213,7 +213,7 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Jobs</a></li>
                     <li><a href="#">Press</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Blog</a></li>
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
@@ -262,7 +262,7 @@
                 <form role="form">
                     <div class="form-group">
                         <div class="btn-group-justified">
-                            <a href="explore.html" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign In with Facebook</a>
+                            <a href="#" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign In with Facebook</a>
                         </div>
                     </div>
                     <div class="form-group">
@@ -289,7 +289,7 @@
                     </div>
                     <div class="form-group">
                         <div class="btn-group-justified">
-                            <a href="explore.html" class="btn btn-lg btn-green">Sign In</a>
+                            <a href="#" class="btn btn-lg btn-green">Sign In</a>
                         </div>
                     </div>
                     <p class="help-block">Don't have an account? <a href="#" class="modal-su text-green">Sign Up</a></p>
@@ -309,7 +309,7 @@
                 <form role="form">
                     <div class="form-group">
                         <div class="btn-group-justified">
-                            <a href="explore.html" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign Up with Facebook</a>
+                            <a href="#" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign Up with Facebook</a>
                         </div>
                     </div>
                     <div class="form-group">
@@ -378,28 +378,5 @@
 <script src="/assets/js/infobox.js"></script>
 <script src="/assets/js/jquery.visible.js"></script>
 <script src="/assets/js/home.js" type="text/javascript"></script>
-
-
-<!-- Modal-Effect -->
-<!-- jQuery  -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/detect.js"></script>
-<script src="assets/js/fastclick.js"></script>
-<script src="assets/js/jquery.slimscroll.js"></script>
-<script src="assets/js/jquery.blockUI.js"></script>
-<script src="assets/js/waves.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/jquery.nicescroll.js"></script>
-<script src="assets/js/jquery.scrollTo.min.js"></script>
-
-
-<script src="assets/js/jquery.core.js"></script>
-<script src="assets/js/jquery.app.js"></script>
-
-<!-- Modal-Effect -->
-<script src="assets/plugins/custombox/js/custombox.min.js"></script>
-<script src="assets/plugins/custombox/js/legacy.min.js"></script>
 </body>
-
 </html>

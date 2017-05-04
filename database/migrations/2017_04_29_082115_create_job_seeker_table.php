@@ -19,6 +19,7 @@ class CreateJobSeekerTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('bio');
             $table->string('profile');
             $table->string('email');
             $table->string('gender');

@@ -18,6 +18,8 @@ use Auth;
 
 use Hash;
 
+use Excel;
+
 use Illuminate\Support\Facades\Input;
 
 use Illuminate\Database\Eloquent\Collection;
@@ -67,6 +69,10 @@ class JobseekerController extends Controller
         //
     }
 
+
+
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -89,6 +95,7 @@ class JobseekerController extends Controller
         $job_seeker->profile                =$filename;
         $job_seeker->email                  =Input::get('email');
         $job_seeker->gender                 =Input::get('gender');
+        $job_seeker->bio                 =Input::get('bio');
         $job_seeker->dob                    =Input::get('dob');
         $job_seeker->personal_status        =Input::get('personal_status');
         $job_seeker->telephone              =Input::get('telephone');
@@ -127,6 +134,53 @@ class JobseekerController extends Controller
         //
     }
 
+    //All job seeker employer
+
+        public function  job_seeker_company(Request $request)
+    {
+        $job_seeker         =Job_seeker::select('job_seeker.*','permission','function')
+                            ->join('users','users.id','=','job_seeker.user_id')
+                             ->where('users.function','=','Company' ,'AND','users.permission','=','jobseeker')
+                            ->get();
+        return view('users.all_job_seeker_company')
+                             ->with('job_seeker',$job_seeker);
+    }
+
+    //    all job seeker individual
+
+    public function  job_seeker_individual(Request $request)
+    {
+        $job_seeker         =Job_seeker::select('job_seeker.*')
+                            ->join('users','users.id','=','job_seeker.user_id')
+                             ->where('users.permission','=','jobseeker' ,'AND','users.function','=','Individual')
+                             ->get();
+        return view('users.all_job_seeker_individual')
+                             ->with('job_seeker',$job_seeker);
+    }
+
+
+    //    All employer company
+    public function  employer_individual(Request $request)
+    {
+        $job_seeker         =Job_seeker::select('job_seeker.*','permission','function')
+                            ->join('users','users.id','=','job_seeker.user_id')
+                            ->where('users.permission','=','employer' ,'AND' ,'users.function','=','Company')
+                            ->get();
+        return view('users.all_employer_individual')
+                            ->with('job_seeker',$job_seeker);
+    }
+
+
+    // All employer individual
+    public function  employer_company(Request $request)
+    {
+        $job_seeker         =Job_seeker::select('job_seeker.*')
+                            ->join('users','users.id','=','job_seeker.user_id')
+                            ->where('users.function','=','Company' ,'AND','users.permission','=','employer')
+                            ->get();
+        return view('users.all_employer_company')
+                            ->with('job_seeker',$job_seeker);
+    }
     /**
      * Show the form for editing the specified resource.
      *
