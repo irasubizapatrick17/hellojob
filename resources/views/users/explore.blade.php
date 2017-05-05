@@ -41,7 +41,7 @@
             </div>
     </div>
     <div class="home-caption" style="padding-top: 40px;margin-top: -190px;">
-        <div class="home-title" style="font-size: 26px;">Search Result</div>
+        <div class="home-title" style="font-size: 26px;">All Handymen</div>
     </div>
     <div class="search-panel">
         <form class="form-inline" role="form">
@@ -122,36 +122,28 @@
 
 <div class="home-wrapper">
     <div class="home-content">
-        <h4 class="text-center pt20 pb20">Top Handymens</h4>
         <div class="row pb40">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-12">
                 <div class="notificationsWidget">
                     <div class="notification">
                         @foreach($job_seeker as $value)
-                            <div class="notification">
-                                <div class="notifyContent">
-                                    <div class="notifyBody">
-                                        <img class="avatar pull-left" src="./jobseekers/{{$value->profile}}" alt="avatar">
-                                        <div class="notify pull-left">
-                                            <div class="name">{{$value->first_name}} {{$value->last_name}}</div>
-                                            <div class="message">{{$value->subject}} {{$value->position}}</div>
-                                            <div class="title">{{$value->nationality}}</div>
+                            <div class="col-md-4">
+                                <div class="notification">
+                                    <div class="notifyContent">
+                                        <div class="notifyBody">
+                                            <img class="avatar pull-left" src="./jobseekers/{{$value->profile}}" alt="avatar">
+                                            <div class="notify pull-left">
+                                                <div class="name">{{$value->first_name}} {{$value->last_name}}</div>
+                                                <div class="message">{{$value->subject}} {{$value->position}}</div>
+                                            </div>
+                                            <div class="pull-right" style="margin-top: -55px;">
+                                                <a href="#" class="btn btn-o btn-success">View Profile</a>
+                                            </div>
+                                            <div class="clearfix"></div>
                                         </div>
-                                        <div class="rating col-md-3">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            ({{$value->id}})
-                                        </div>
-                                        <div class="pull-right">
-                                            <a href="#" class="btn btn-o btn-success">View Profile</a>
-                                        </div>
-                                        <div class="clearfix"></div>
                                     </div>
+                                    <div class="clearfix"></div>
                                 </div>
-                                <div class="clearfix"></div>
                             </div>
                         @endforeach
                         <div class="clearfix"></div>

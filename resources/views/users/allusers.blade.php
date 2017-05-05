@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
-    <meta name="author" content="Coderthemes">
+    <meta name="description" content="">
+    <meta name="author" content="Admin">
 
     <link rel="shortcut icon" href="/sets/images/favicon_1.ico">
 
@@ -150,15 +150,7 @@
                                             <p><span class="label label-table label-danger">{{$value->status}}</span></p>
                                             <?php } ?>
                                         </td>
-                                    <!-- {{$value->status}}</td> -->
-                                    <!-- <td>
-                                                    <?php if($value->status =='active'){ ?>
-                                            <a href="" type="submit" class="label label-table label-inverse "onclick="deactivate({{$value->id}})">  Change status</a>
-                                      <?php } else { ?>
-                                            <a href=""   type="submit" class="label label-table label-inverse" onclick="activate({{$value->id}})">  change status</a>
-                                      <?php } ?>
-                                            </td> -->
-                                        <td>
+                                        <td style="display: block !important">
                                             <?php if($value->status =='active'){ ?>
                                             <a href="" type="submit" onclick="deactivate({{$value->id}})"> <input type="checkbox"  data-plugin="switchery" data-color="#ED5565" data-secondary-color="#1AB394" />
 
@@ -199,115 +191,7 @@
     <!-- ============================================================== -->
 
 
-    <!-- Right Sidebar -->
-    <div class="side-bar right-bar nicescroll">
-        <h4 class="text-center">Chat</h4>
-        <div class="contact-list nicescroll">
-            <ul class="list-group contacts-list">
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-1.jpg" alt="">
-                        </div>
-                        <span class="name">Chadengle</span>
-                        <i class="fa fa-circle online"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-2.jpg" alt="">
-                        </div>
-                        <span class="name">Tomaslau</span>
-                        <i class="fa fa-circle online"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-3.jpg" alt="">
-                        </div>
-                        <span class="name">Stillnotdavid</span>
-                        <i class="fa fa-circle online"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-4.jpg" alt="">
-                        </div>
-                        <span class="name">Kurafire</span>
-                        <i class="fa fa-circle online"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-5.jpg" alt="">
-                        </div>
-                        <span class="name">Shahedk</span>
-                        <i class="fa fa-circle away"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-6.jpg" alt="">
-                        </div>
-                        <span class="name">Adhamdannaway</span>
-                        <i class="fa fa-circle away"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-7.jpg" alt="">
-                        </div>
-                        <span class="name">Ok</span>
-                        <i class="fa fa-circle away"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-8.jpg" alt="">
-                        </div>
-                        <span class="name">Arashasghari</span>
-                        <i class="fa fa-circle offline"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-9.jpg" alt="">
-                        </div>
-                        <span class="name">Joshaustin</span>
-                        <i class="fa fa-circle offline"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-                <li class="list-group-item">
-                    <a href="form-advanced.html#">
-                        <div class="avatar">
-                            <img src="/sets/images/users/avatar-10.jpg" alt="">
-                        </div>
-                        <span class="name">Sortino</span>
-                        <i class="fa fa-circle offline"></i>
-                    </a>
-                    <span class="clearfix"></span>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- /Right-bar -->
+    
 
 
 </div>
@@ -361,25 +245,7 @@
     };
 </script>
 
-<!-- jQuery  -->
 
-
-<script src="/sets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.min.js"></script>
-<script src="/sets/plugins/switchery/js/switchery.min.js"></script>
-<script type="text/javascript" src="/sets/plugins/multiselect/js/jquery.multi-select.js"></script>
-<script type="text/javascript" src="/sets/plugins/jquery-quicksearch/jquery.quicksearch.js"></script>
-<script src="/sets/plugins/select2/js/select2.min.js" type="text/javascript"></script>
-<script src="/sets/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
-<script src="/sets/plugins/bootstrap-filestyle/js/bootstrap-filestyle.min.js" type="text/javascript"></script>
-<script src="/sets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
-<script src="/sets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
-
-<script type="text/javascript" src="/sets/plugins/autocomplete/jquery.mockjax.js"></script>
-<script type="text/javascript" src="/sets/plugins/autocomplete/jquery.autocomplete.min.js"></script>
-<script type="text/javascript" src="/sets/plugins/autocomplete/countries.js"></script>
-<script type="text/javascript" src="/sets/pages/autocomplete.js"></script>
-
-<script type="text/javascript" src="/sets/pages/jquery.form-advanced.init.js"></script>
 
 <!-- jQuery  -->
 <script src="/sets/js/jquery.min.js"></script>
@@ -394,16 +260,30 @@
 <script src="/sets/js/jquery.scrollTo.min.js"></script>
 
 
+<script src="/sets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.min.js"></script>
+<script src="/sets/plugins/switchery/js/switchery.min.js"></script>
+<script type="text/javascript" src="/sets/plugins/multiselect/js/jquery.multi-select.js"></script>
+<script type="text/javascript" src="/sets/plugins/jquery-quicksearch/jquery.quicksearch.js"></script>
+<script src="/sets/plugins/select2/js/select2.min.js" type="text/javascript"></script>
+<script src="/sets/plugins/bootstrap-filestyle/js/bootstrap-filestyle.min.js" type="text/javascript"></script>
+<script src="/sets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+<script src="/sets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/sets/plugins/autocomplete/jquery.mockjax.js"></script>
+<script type="text/javascript" src="/sets/plugins/autocomplete/jquery.autocomplete.min.js"></script>
+<script type="text/javascript" src="/sets/plugins/autocomplete/countries.js"></script>
+<script type="text/javascript" src="/sets/pages/autocomplete.js"></script>
+
+<script type="text/javascript" src="/sets/pages/jquery.form-advanced.init.js"></script>
+
+
 <script src="/sets/js/jquery.core.js"></script>
 <script src="/sets/js/jquery.app.js"></script>
 
-<!--FooTable-->
-<script src="/sets/plugins/footable/js/footable.all.min.js"></script>
-
-<script src="/sets/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
-
 <!--FooTable Example-->
 <script src="/sets/pages/jquery.footable.js"></script>
+
+
 
 </body>
 </html>

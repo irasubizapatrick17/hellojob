@@ -96,6 +96,6 @@ class LoginController extends Controller
 
             return redirect()->route('login');
         }
-        return redirect()->back();
+            return back()->withInput()->withErrors(['email'=>'Email is Wrong','password'=>'password is wrong']);
     }
 }

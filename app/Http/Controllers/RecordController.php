@@ -82,12 +82,12 @@ class RecordController extends Controller
     {
 
         $user_id                            = Auth::id();
-        $records                         =new Records;
-        $records->job_seeker_id          =Input::get('job_seeker_id');
-        $records->status                 =Input::get('status');
-        $records->user_id                =$user_id;
+        $record                         =new Record;
+        $record->job_seeker_id          =Input::get('job_seeker_id');
+        $record->status                 =Input::get('status');
+        $record->user_id                =$user_id;
 
-        $records->save();
+        $record->save();
 
         Session::flash('message', 'Hire request successful please wait to confirm your request');
 

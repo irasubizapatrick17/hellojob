@@ -62,16 +62,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="btn-group pull-right m-t-15">
-                            <button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
-                            <ul class="dropdown-menu drop-menu-right" role="menu">
-                                <li><a href="tables-basic.html#">Action</a></li>
-                                <li><a href="tables-basic.html#">Another action</a></li>
-                                <li><a href="tables-basic.html#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="tables-basic.html#">Separated link</a></li>
-                            </ul>
-                        </div>
+                        
 
                         <h4 class="page-title">COMPANY PROFILE</h4>
                         <ol class="breadcrumb">

@@ -21,53 +21,58 @@
 <body class="notransition black">
 <div class="col-md-4 col-md-offset-4" style="padding-top: 130px;">
     <div class="panel panel-default">
-        <div class="panel-body" style="width: 410px; margin-left: 23px;">
+        <center>
+          <img src="sets/images/logo.png" width="100px;" style="padding-top: 10px;padding-bottom: 10px;">
+        </center>
+        @if(count ($errors))
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <p>{{$error}}</p>
+            @endforeach
+        </div>
+        @endif
+        <div class="panel-body">
             <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
-                <div class="form-group">
-                    <div class="btn-group-justified">
-                        <a href="#" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign In with Facebook</a>
+                <div class="col-md-12">
+                    <div class="form-group" {{ $errors->has('email') ? ' has-error' : '' }}>
+                        <input  id="email" type="email"  name="email" value="{{ old('email') }}" required autofocus class="form-control" placeholder="Your Email">
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="btn-group-justified">
-                        <a href="#" class="btn btn-lg btn-google"><span class="fa fa-google-plus pull-left"></span>Sign In with Google</a>
-                    </div>
-                </div>
-                <div class="signOr">OR</div>
-                <div class="form-group" {{ $errors->has('email') ? ' has-error' : '' }}>
-                    <input  id="email" type="email"  name="email" value="{{ old('email') }}" required autofocus class="form-control" placeholder="Your Email">
-                    @if ($errors->has('email'))
-                        <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                    @endif
-                </div>
-                <div class="form-group">
-                    <input id="password" type="password"  name="password" required  autofocus class="form-control" placeholder="Password">
+                
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input id="password" type="password"  name="password" required  autofocus class="form-control" placeholder="Password">
 
-                    @if ($errors->has('password'))
-                        <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                    @endif
+                        @if ($errors->has('password'))
+                            <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                        @endif
+                    </div>
                 </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Remember me</label></div>
-                        </div>
-                        <div class="col-xs-6 align-right">
-                            <p class="help-block"><a href="{{ route('password.request') }}" class="text-green">Forgot password?</a></p>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Remember me</label></div>
+                            </div>
+                            <div class="col-xs-6 align-right">
+                                <p class="help-block"><a href="{{ route('password.request') }}" class="text-green">Forgot password?</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="btn-group-justified">
-                        <button type="submit" class="btn btn-lg btn-green" style="width: 406px;">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-green btn-block">
                             Login
                         </button>
-
                     </div>
                 </div>
                 <p class="help-block">Don't have an account? <a href="{{ url('/register') }}" class="text-green">Sign Up</a></p>

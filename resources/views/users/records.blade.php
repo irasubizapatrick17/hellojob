@@ -116,6 +116,69 @@
                                         </div><!-- /.modal-dialog -->
                                     </div><!-- /.modal -->
                                     <div class="p-20">
+                                    <table>
+                                        
+                            <table id="demo-foo-filtering" class="table table-striped toggle-circle m-b-0" data-page-size="7">
+                                <thead>
+                                <tr>
+                                    <th data-toggle="true">#</th>
+                                    <th>Company Name</th>
+                                    <th data-hide="phone">Job Seeker Name</th>
+                                    <th data-hide="phone">Telephone </th>
+                                    <th data-hide="phone">Email</th>
+
+                                    <!-- <th data-hide="phone, tablet">test</th> -->
+                                </tr>
+                                </thead>
+                                <div class="form-inline m-b-20">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-xs-center">
+                                            <div class="form-group">
+                                                <label class="control-label m-r-5">Status</label>
+                                                <select id="demo-foo-filter-status" class="form-control input-sm">
+                                                    <option value="">Show all</option>
+                                                    <option value="active">Active</option>
+                                                    <option value="deactive">Disabled</option>
+                                                    <!-- <option value="suspended">Suspended</option> -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 text-xs-center text-right">
+                                            <div class="form-group">
+                                                <input id="demo-foo-search" type="text" placeholder="Search" class="form-control input-sm" autocomplete="on">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <tbody>
+
+                                <?php $i=0;?>
+                                @foreach($job_seeker AS $value)
+                                    <tr  id="userid" data-userid="{{$value->id}}">
+                                        <td>{{++$i}}</td>
+                                        <td>{{$value->job_seeker_id}}</td>
+                                        <td>{{$value->user_id}}</td>
+                                        <td>{{$value->user_id}}</td>
+                                        <td>{{$value->user_id}}</td>
+                                        
+
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="5">
+                                        <div class="text-right">
+                                            <ul class="pagination pagination-split m-t-30 m-b-0"></ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                                    </table>
                                     </div>
 
                                 </div>

@@ -29,7 +29,11 @@
         ga('create', 'UA-69506598-1', 'auto');
         ga('send', 'pageview');
     </script>
-
+    <style type="text/css">
+        td{
+            padding-top: 20px !important;
+        }
+    </style>
 
 </head>
 
@@ -63,16 +67,7 @@
                 <!-- Page-Title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="btn-group pull-right m-t-15">
-                            <button type="button" class="btn btn-default dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
-                            <ul class="dropdown-menu drop-menu-right" role="menu">
-                                <li><a href="tables-basic.html#">Action</a></li>
-                                <li><a href="tables-basic.html#">Another action</a></li>
-                                <li><a href="tables-basic.html#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="tables-basic.html#">Separated link</a></li>
-                            </ul>
-                        </div>
+                        
 
                         <h4 class="page-title">ALL EMPLOYEE</h4>
                         <ol class="breadcrumb">
@@ -97,13 +92,9 @@
                                     <h4 class="m-t-0 header-title"><b>Our Employee Profile</b></h4>
                                     <p class="text-muted font-13">
                                     </p>
-                                    <!-- Custom width modal -->
-                                    <button class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#custom-width-modal" style="margin-left: 900px;">Add new Employee</button>
-                                    <!-- sample modal content -->
-
-                                    <div id="custom-width-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
-                                        <div class="modal-dialog" style="width:55%;">
-                                            <div class="modal-content" style="width: 1100px;margin-left: -69px;">
+                                    <div id="custom-width-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true">
+                                        <div class="modal-dialog"  style="width: 1070px;">
+                                            <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                     <h4 class="modal-title" id="custom-width-modalLabel">add employee</h4>
@@ -269,7 +260,8 @@
                                     </div><!-- /.modal -->
                                     <div class="p-20">
                                         <div class="table-responsive">
-                                            <table class="table m-0">
+                                            <button class="btn btn-primary waves-effect waves-light pull-right" data-toggle="modal" data-target="#custom-width-modal"> <i class="fa fa-plus"></i>Add new Employee</button>
+                                            <table class="table m-0" style="margin-top: 20px">
                                                 <thead>
 
                                                 <tr>
@@ -292,7 +284,7 @@
                                                     <td>{{++$i}}</td>
                                                     <td>
                                                         <center>
-                                                            <img src="./jobseekers/{{$value->profile}}" class="img-circle" style="width: 53px; margin-left: -35px;">
+                                                            <img src="./jobseekers/{{$value->profile}}" class="img-circle" style="width: 40px;">
                                                         </center>
                                                     </td>
                                                     <td>{{$value->first_name}} {{$value->last_name}}</td>

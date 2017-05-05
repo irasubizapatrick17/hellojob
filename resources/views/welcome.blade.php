@@ -157,6 +157,7 @@
                             <div class="clearfix"></div>
                         </div>
                     @endforeach
+                    <a class="btn btn-success btn-block" href="/search_job_seeker">Browse More</a>
                 </div>
             </div>
             <h4 class="text-right pb20" style="margin-top: -50px;">Featured Company</h4>
@@ -179,11 +180,13 @@
     <div class="col-md-7 custom-how-bg" style="padding-left: 0px;padding-right: 0px;">
         <div class="p-custom">
             <h3>How its Works ?</h3>
-            <p>
-                simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            </p>
+            <ol>
+                <li class="how-list">Join to see detailed, verified reviews on local companies and individuals.</li>
+                <li class="how-list">Compare local companies or individuals.</li>
+                <li class="how-list">Select the best handymen and hire them.</li>
+                <li class="how-list">Share your review, or get help from our team to resolve issues.</li>
+            </ol>
         </div>
-        <button class="btn btn-success btn-block">Find out More</button>
     </div>
     <div class="col-md-5" style="padding: 0px;">
         <img src="/assets/images/page.png" class="img-responsive">
@@ -251,123 +254,6 @@
         <div class="copyright">HandyMens web application<br> &copy; 2017</div>
     </div>
 </div>
-
-<div class="modal fade" id="signin" role="dialog" aria-labelledby="signinLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="signinLabel">Sign In</h4>
-            </div>
-            <div class="modal-body">
-                <form role="form">
-                    <div class="form-group">
-                        <div class="btn-group-justified">
-                            <a href="#" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign In with Facebook</a>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="btn-group-justified">
-                            <a href="explore.html" class="btn btn-lg btn-google"><span class="fa fa-google-plus pull-left"></span>Sign In with Google</a>
-                        </div>
-                    </div>
-                    <div class="signOr">OR</div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Email Address" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="checkbox custom-checkbox"><label><input type="checkbox"><span class="fa fa-check"></span> Remember me</label></div>
-                            </div>
-                            <div class="col-xs-6 align-right">
-                                <p class="help-block"><a href="#" class="text-green">Forgot password?</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="btn-group-justified">
-                            <a href="#" class="btn btn-lg btn-green">Sign In</a>
-                        </div>
-                    </div>
-                    <p class="help-block">Don't have an account? <a href="#" class="modal-su text-green">Sign Up</a></p>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="signup" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="signupLabel">Sign Up</h4>
-            </div>
-            <div class="modal-body">
-                <form role="form">
-                    <div class="form-group">
-                        <div class="btn-group-justified">
-                            <a href="#" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign Up with Facebook</a>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="btn-group-justified">
-                            <a href="explore.html" class="btn btn-lg btn-google"><span class="fa fa-google-plus pull-left"></span>Sign Up with Google</a>
-                        </div>
-                    </div>
-                    <div class="signOr">OR</div>
-                    <div class="form-group">
-                        <input type="text" placeholder="First Name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Last Name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Email Address" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Confirm Password" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <div class="btn-group-justified">
-                            <a href="explore.html" class="btn btn-lg btn-green">Sign Up</a>
-                        </div>
-                    </div>
-                    <p class="help-block">Already a HelloJob member? <a href="#" class="modal-si text-green">Sign In</a></p>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-{{--<script type="text/javascript">--}}
-    {{--var token = '{{Session::token()}}';--}}
-    {{--var url = '{{ route('view')}}';--}}
-{{--</script>--}}
-{{--<script type="text/javascript">--}}
-    {{--function view(userid) {--}}
-        {{--var url             = "/viewprofile";--}}
-        {{--var $status         = {};--}}
-        {{--$status.id          = userid;--}}
-
-
-        {{--$.ajax({--}}
-            {{--type: "GET",--}}
-            {{--headers:{"X-CSRF-TOKEN":token},--}}
-            {{--url: url,--}}
-            {{--data: $status,--}}
-            {{--cache: false,--}}
-            {{--success: function(data){--}}
-                {{--window.location.pathname = '/viewprofile';--}}
-            {{--}--}}
-        {{--});--}}
-        {{--return false;--}}
-    {{--};--}}
-{{--</script>--}}
 <script src="/assets/js/jquery-2.1.1.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <script src="/assets/js/jquery-ui-touch-punch.js"></script>
